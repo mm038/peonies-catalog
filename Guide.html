@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Peonies Boutique · Catalog Guide</title><style>@font-face{font-family:Forum;src:url(assets/fonts/forum-latin-400-normal.woff2)}body{font:16px/1.6 "Segoe UI",system-ui,sans-serif;color:#34352a;background:#f7f2ea;margin:0}main{max-width:880px;margin:0 auto;padding:2.5rem 2rem 4rem;background:#fffdf9;min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.06)}.logo{width:220px;display:block;margin:0 auto 1rem}h1,h2{font-family:Forum,Georgia,serif;font-weight:400;color:#3e402f}h1{text-align:center;font-size:2.3rem}h2{font-size:1.7rem;margin-top:2.4rem;border-bottom:1px solid #e8dfd1;padding-bottom:.3rem}table{border-collapse:collapse;width:100%;margin:1rem 0}td,th{border:1px solid #e8dfd1;padding:.5rem .7rem;text-align:left;vertical-align:top}th{background:#f3ede2}code{background:#f3ede2;padding:1px 5px;border-radius:4px}pre{background:#f3ede2;padding:1rem;border-radius:10px;overflow:auto}pre code{background:none}hr{border:0;border-top:1px solid #e8dfd1;margin:2rem 0}</style></head><body><main><img class="logo" src="assets/brand/logo-olive.png" alt="Peonies Boutique"><h1>Peonies Boutique · Digital Catalog Guide</h1>
+<p>This guide covers everything you need to run and look after the in-store catalog. You don&#39;t need any technical knowledge.</p>
+<hr>
+<h2>1. What&#39;s in the folder</h2>
+<pre><code>Peonies Catalog/
+├─ Start Peonies Catalog.bat   ← double-click this to open the catalog full screen
+├─ index.html                  ← the catalog itself (you can also open it directly in Edge or Chrome)
+├─ Guide.html                  ← this guide
+├─ css/                        ← design (do not edit)
+├─ js/                         ← program files (do not edit)
+├─ assets/
+│  ├─ brand/                   ← logo, frame, textures and peony illustrations from your brand files
+│  └─ fonts/                   ← fonts included so the catalog works offline
+├─ sample-media/               ← a sample film and photo you can use to try uploading
+└─ browser-data/               ← created automatically on first start; holds your saved catalog
+</code></pre>
+<p>Keep the folder together. Don&#39;t rename or move the files inside it.</p>
+<hr>
+<h2>2. Opening the catalog on the Windows touchscreen</h2>
+<ol>
+<li>Copy the whole <strong>Peonies Catalog</strong> folder to the computer, for example to <code>C:\Peonies Catalog</code>. Avoid temporary places like Downloads or the Desktop on a shared account.</li>
+<li>Double-click <strong>Start Peonies Catalog.bat</strong>.<ul>
+<li>It opens the catalog <strong>full screen</strong> in Microsoft Edge, or Google Chrome if Edge isn&#39;t there.</li>
+<li>It uses its own browser profile (the <code>browser-data</code> folder), so your catalog stays separate from normal web browsing.</li>
+<li>Film sound is allowed, swiping back is turned off, and page pinch-zoom is turned off. Customers can still zoom into photos.</li>
+</ul>
+</li>
+<li>To <strong>close</strong> the catalog, press <strong>Alt + F4</strong> on a keyboard.</li>
+</ol>
+<p><strong>Start automatically when the computer turns on (recommended):</strong>
+Press <strong>Windows + R</strong>, type <code>shell:startup</code> and press Enter. A folder opens. Right-click <strong>Start Peonies Catalog.bat</strong>, choose <strong>Create shortcut</strong>, and drag the shortcut into that folder.</p>
+<p><strong>Tips for the screen:</strong></p>
+<ul>
+<li>Windows Settings → System → Power: set the screen to <strong>never</strong> turn off or sleep. The catalog&#39;s own screensaver takes over instead.</li>
+<li>Always start the catalog with the same launcher. Opening <code>index.html</code> another way (for example in your everyday Edge window) uses a different storage area, and it will look like the catalog is empty or showing samples.</li>
+</ul>
+<p>On first start, the catalog shows <strong>sample content</strong>. Every sample is labelled &quot;Sample&quot; so you can tell it apart from your own designs.</p>
+<hr>
+<h2>2b. Installing on an Android screen (Taktik and similar)</h2>
+<p>The catalog can also be installed as an app on Android touchscreens. Once installed, it opens full screen, <strong>works without internet</strong> and keeps everything saved on the screen itself.</p>
+<ol>
+<li>Connect the screen to Wi-Fi (needed only for installing and for updates).</li>
+<li>Open <strong>Chrome</strong> on the screen and go to your catalog address, for example <code>https://YOUR-GITHUB-NAME.github.io/peonies-catalog/</code>.</li>
+<li>Wait a few seconds, then tap Chrome&#39;s <strong>⋮</strong> menu → <strong>Install app</strong> (or <strong>Add to Home screen</strong>). You can also use <strong>Admin → Display → Install as app on this screen</strong>.</li>
+<li>Open <strong>Peonies Catalog</strong> from the home screen. It now runs full screen. Do your Admin setup here (photos, film, PIN). Don&#39;t use the Chrome tab for this, because the installed app keeps its own saved data.</li>
+<li><strong>Lock the screen to the catalog (free):</strong> Android Settings → Security (or Security &amp; privacy → More) → <strong>App pinning / Screen pinning</strong> → On. Then open the catalog, open the recent-apps view, tap the catalog&#39;s icon and choose <strong>Pin</strong>. To unpin, hold Back + Overview (or follow the message shown on screen).</li>
+<li>The screen stays awake while the catalog is open. Also set the display&#39;s sleep or standby timer to its longest setting, or off.</li>
+</ol>
+<p><strong>Where your content lives on Android:</strong> photos, film and settings are stored inside the installed app on that screen. They are <strong>never uploaded to GitHub</strong>. GitHub only hosts the empty app (code, brand graphics and sample pictures). Backups download to the screen&#39;s <strong>Download</strong> folder. From there, copy them to a USB stick or upload them to Google Drive.</p>
+<p><strong>Updates:</strong> if the app files on GitHub are updated, the screen picks up the new version the next time it opens while connected to Wi-Fi. Your content is not affected.</p>
+<hr>
+<h2>3. Opening Admin Mode</h2>
+<ul>
+<li><strong>Press and hold the Peonies Boutique logo for 3 seconds</strong> (on the home screen, the top bar, or the film screen), then enter your PIN.</li>
+<li>With a keyboard you can also press <strong>Ctrl + Alt + P</strong>.</li>
+<li>The default PIN is <strong>1234</strong>. Change it right away under <strong>Security</strong>.</li>
+<li>To leave Admin Mode, tap <strong>Return to catalog</strong> at the bottom left. Admin Mode also locks itself after 10 minutes without activity (you can change this).</li>
+<li><strong>Preview catalog</strong> lets you see the customer view and come back to Admin Mode with one tap.</li>
+</ul>
+<hr>
+<h2>4. Categories (collections)</h2>
+<p>Go to <strong>Admin → Categories</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>To…</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Add a category</td>
+<td><strong>Add category</strong> → enter the English name (and Arabic, optional) → <strong>Create category</strong></td>
+</tr>
+<tr>
+<td>Rename / edit</td>
+<td>Tap the category or the pencil icon → change it → <strong>Save category</strong></td>
+</tr>
+<tr>
+<td>Choose a cover image</td>
+<td>In the editor: <strong>Upload image</strong> or <strong>Choose existing</strong>. <strong>Use automatic</strong> uses the first photo of the first arrangement</td>
+</tr>
+<tr>
+<td>Reorder</td>
+<td>Drag the ⠿ handle up or down. The new order is saved immediately</td>
+</tr>
+<tr>
+<td>Hide / show</td>
+<td>Tap the eye icon. Hidden categories and their arrangements are invisible to customers</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Tap the bin icon. If it has arrangements, choose whether to <strong>move them to another category</strong> or <strong>delete them too</strong></td>
+</tr>
+<tr>
+<td>See its arrangements</td>
+<td><strong>View arrangements</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>5. Arrangements</h2>
+<p>Go to <strong>Admin → Arrangements</strong>.</p>
+<p><strong>Add an arrangement:</strong></p>
+<ol>
+<li>Tap <strong>Add arrangement</strong>.</li>
+<li><strong>Upload photos</strong>. You can pick several at once, or drag image files from a folder onto the Photos box. Photos are previewed (marked &quot;New&quot;) and only saved when you tap <strong>Add to catalog</strong>.</li>
+<li>Enter a <strong>name</strong> (or a reference code) and choose a <strong>category</strong>. Everything else is optional: Arabic name, description, price, tags, Featured and Visible.</li>
+<li>Tap <strong>Add to catalog</strong>.</li>
+</ol>
+<p><strong>Photos:</strong></p>
+<ul>
+<li>The <strong>first photo is the cover</strong>. Reorder by dragging a photo, or with the ◀ ▶ arrows.</li>
+<li><strong>↻ Replace</strong> swaps a photo. <strong>🗑 Remove</strong> takes it off the arrangement.</li>
+<li><strong>Choose from library</strong> reuses photos you already have. Nothing is stored twice: if you upload the same photo again, the catalog spots it and reuses the copy it has.</li>
+<li>Large photos are resized automatically (longest side 2400 px), and small thumbnails are made for fast browsing.</li>
+<li>iPhone <strong>HEIC</strong> photos can&#39;t be read by browsers. Export them as JPG first. Damaged files are reported clearly and skipped.</li>
+</ul>
+<p><strong>Other actions</strong> (icons on each row):</p>
+<ul>
+<li>☆ <strong>Featured</strong>: shows the design in <em>Featured</em> and in the screensaver slideshow.</li>
+<li>👁 <strong>Hide / show</strong>: hides a design without deleting it.</li>
+<li>⧉ <strong>Duplicate</strong>: makes a copy. The copy starts <strong>hidden</strong> so you can finish it first.</li>
+<li>✎ <strong>Edit</strong> and 🗑 <strong>Delete</strong>. Deleting also removes its photos, unless another arrangement still uses them.</li>
+<li><strong>Several at once:</strong> tick the boxes, then use <strong>Move to…, Show, Hide, Feature, Unfeature</strong> or <strong>Delete</strong>.</li>
+<li><strong>Change the display order:</strong> choose one category in the filter at the top, then drag the ⠿ handles.</li>
+</ul>
+<p>Empty optional fields (price, description, tags, code) are simply not shown to customers. You can also switch off prices, codes, tags and descriptions for everyone under <strong>Display</strong>.</p>
+<hr>
+<h2>6. The promotional film</h2>
+<p>Go to <strong>Admin → Film &amp; Screensaver</strong>.</p>
+<ul>
+<li><strong>Upload film</strong>: choose an <strong>MP4 (H.264)</strong> or <strong>WebM</strong> video. Most phone and editing apps export MP4. The film is saved on the computer and plays <strong>without internet</strong>.</li>
+<li><strong>Replace film</strong> swaps it. <strong>Remove film</strong> deletes it, and the Film button disappears for customers until you add a new one.</li>
+<li>In the catalog, the film <strong>starts automatically and loops</strong>. Customers get discreet controls for play/pause, sound, a progress bar and full screen. The controls fade away after a few seconds.</li>
+<li><strong>Start with sound:</strong> browsers sometimes block sound until the screen is touched. If that happens the film starts muted and customers can tap the speaker. The Windows launcher allows sound.</li>
+<li>Very large videos (over about 500 MB) make backups slow. A 1080p film of a few minutes is ideal.</li>
+</ul>
+<p><strong>Screensaver (Attract Mode):</strong> turn it on, choose how many seconds without a touch before it starts, and choose what it shows: the film, or a slideshow of your Featured arrangements. The <strong>first touch</strong> closes it and returns to the catalog. Use <strong>Preview screensaver</strong> to try it.</p>
+<p><strong>Return to home screen:</strong> after the set time without touches, the catalog closes open photos and search and switches back to the default language, so each customer starts fresh.</p>
+<p>Tap <strong>Save changes</strong> in the bar at the bottom after changing settings.</p>
+<hr>
+<h2>7. Display, brand and language</h2>
+<ul>
+<li><strong>Display:</strong> choose the opening screen (Home, Featured, New Arrivals or Film), photos per row, which information is shown, Arabic on/off, and the default language.</li>
+<li><strong>Brand:</strong> replace or restore the logo, edit all welcome and heading texts in English and Arabic, choose a colour scheme (Olive Classic, Ivory Light or Blush Romance), and turn the watercolour peony decorations on or off.</li>
+<li><strong>Arabic:</strong> customers tap <strong>العربية</strong> to switch. The layout flips to right-to-left and shows the Arabic names and descriptions you entered. Where Arabic is empty, the English text is shown.</li>
+</ul>
+<hr>
+<h2>8. Backups and restoring</h2>
+<p>Go to <strong>Admin → Backup &amp; Data</strong>.</p>
+<p><strong>Saved on this computer vs. portable backup:</strong></p>
+<ul>
+<li>Every change you save is stored <strong>inside the browser profile on this computer</strong> (<code>browser-data</code> folder). It survives closing, refreshing and restarting. It is <strong>not</strong> shared with other computers, and it could be lost if the browser data is cleared, the folder is deleted or the disk fails.</li>
+<li>A <strong>backup</strong> is one <strong>.zip</strong> file with everything: categories, arrangements, settings, all photos and the film. It&#39;s the safe, portable copy.</li>
+</ul>
+<p><strong>Create a backup:</strong> tap <strong>Download full backup</strong>. The file (for example <code>Peonies-Catalog-Backup-2026-11-22-1430.zip</code>) goes to the <strong>Downloads</strong> folder. Copy it to a USB stick or cloud drive. Back up after every big round of changes. The Overview page reminds you if your last backup is more than 7 days old.</p>
+<p><strong>Restore a backup:</strong> tap <strong>Choose backup file…</strong> and select the .zip. You see what&#39;s inside before confirming. Restoring <strong>replaces everything</strong> currently in the catalog, so back up the current catalog first if you might need it. Don&#39;t unzip or edit the backup file.</p>
+<p><strong>Sample content:</strong> <strong>Remove sample content</strong> deletes all items marked &quot;Sample&quot;, plus sample categories that are left empty. Categories you&#39;ve added your own designs to are kept.</p>
+<p><strong>Start over:</strong> <strong>Erase the whole catalog…</strong> deletes everything except your PIN.</p>
+<hr>
+<h2>9. Moving the catalog to another computer or touchscreen</h2>
+<p><strong>Recommended method (always works):</strong></p>
+<ol>
+<li>On the old computer: <strong>Admin → Backup &amp; Data → Download full backup</strong>.</li>
+<li>Copy the <strong>Peonies Catalog</strong> folder and the backup <strong>.zip</strong> to the new computer, for example with a USB stick.</li>
+<li>On the new computer: start <strong>Start Peonies Catalog.bat</strong>. It opens with sample content.</li>
+<li>Enter Admin Mode (PIN <strong>1234</strong> on a new computer) → <strong>Backup &amp; Data → Choose backup file…</strong> → select the .zip → <strong>Replace and restore</strong>.</li>
+<li>Your PIN, settings, photos and film are now on the new computer.</li>
+</ol>
+<p><strong>Quick method (same Windows setup):</strong> close the catalog (Alt+F4) and copy the entire <strong>Peonies Catalog</strong> folder, including <code>browser-data</code>. This usually carries everything over. It can fail between different browser versions, so keep a backup .zip as well.</p>
+<hr>
+<h2>10. Limitations</h2>
+<ul>
+<li><strong>Where data lives:</strong> the catalog runs entirely in the browser, with no server, internet or subscription. Content is stored with the browser&#39;s built-in database (IndexedDB) inside the <code>browser-data</code> profile. Photos and video are kept there as files, not in the small &quot;localStorage&quot;. Storage space is a share of the free disk space, usually many gigabytes. <strong>Admin → Media Library</strong> shows how much is used.</li>
+<li><strong>Permanent storage:</strong> the catalog asks the browser to protect its data from automatic clean-up. Media Library shows whether the browser said yes. On local files the browser often says &quot;Not confirmed&quot;. Data is still saved normally (tested across restarts), but regular backups are your real safety net.</li>
+<li><strong>Don&#39;t clear browsing data</strong> for the catalog&#39;s browser profile, and don&#39;t use InPrivate/Incognito or Edge&#39;s built-in &quot;kiosk mode&quot; (Windows <em>Assigned Access</em>). Those wipe data when they close, which is why the launcher uses its own normal profile instead.</li>
+<li><strong>PIN security:</strong> the PIN stops customers from getting into Admin Mode. It is not strong security. It is stored only as a one-way fingerprint (hash), but someone with a keyboard, technical knowledge and access to the computer could get around it or clear the data. Keep the Windows account itself locked to staff.</li>
+<li><strong>Forgotten PIN:</strong> with a keyboard, open the catalog in Edge or Chrome with <code>#reset-pin</code> added to the end of the address (for example <code>file:///C:/Peonies%20Catalog/index.html#reset-pin</code>) and confirm. The PIN goes back to <strong>1234</strong>. Your content isn&#39;t affected.</li>
+<li><strong>One window at a time:</strong> don&#39;t open the catalog in two windows with the same profile.</li>
+<li><strong>Browsers:</strong> made for current <strong>Microsoft Edge</strong> and <strong>Google Chrome</strong> on Windows, and <strong>Chrome on Android</strong>. Firefox and Safari aren&#39;t supported.</li>
+<li><strong>Android:</strong> don&#39;t clear Chrome&#39;s data or storage for the catalog, and don&#39;t uninstall the app, without first downloading a backup.</li>
+<li><strong>Backup size:</strong> a single backup file can&#39;t be bigger than 4 GB.</li>
+</ul>
+<hr>
+<h2>11. Quick troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The catalog shows only samples / looks empty</td>
+<td>It was opened in a different browser or profile. Close it and use <strong>Start Peonies Catalog.bat</strong></td>
+</tr>
+<tr>
+<td>Film doesn&#39;t play</td>
+<td>Use MP4 (H.264) or WebM. Re-export the video and upload it again</td>
+</tr>
+<tr>
+<td>Film has no sound</td>
+<td>Tap the speaker icon, or turn on <strong>Start with sound</strong> and use the launcher</td>
+</tr>
+<tr>
+<td>A photo shows &quot;This image could not be displayed&quot;</td>
+<td>The file is damaged or missing. Replace it in the arrangement editor</td>
+</tr>
+<tr>
+<td>Touch keyboard of Windows covers the screen</td>
+<td>The catalog has its own on-screen keyboard for search. In Admin Mode, use the Windows touch keyboard or a USB keyboard</td>
+</tr>
+<tr>
+<td>Catalog stuck or looks odd</td>
+<td>Press F5 to reload. Nothing saved is lost</td>
+</tr>
+</tbody></table>
+</main></body></html>

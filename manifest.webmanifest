@@ -1,0 +1,18 @@
+{
+  "name": "Peonies Boutique · Digital Catalog",
+  "short_name": "Peonies Catalog",
+  "description": "In-store digital catalog of Peonies Boutique floral arrangements.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "any",
+  "background_color": "#565741",
+  "theme_color": "#565741",
+  "lang": "en",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

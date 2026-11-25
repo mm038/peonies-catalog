@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Peonies Boutique · Digital Catalog</title>
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <script>if (/^https?:$/.test(location.protocol)) document.write('<link rel="manifest" href="manifest.webmanifest">');</script>
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#565741">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-theme="olive">
+  <!-- Loading screen -->
+  <div id="boot"><img class="boot-logo" src="assets/brand/logo-cream.png" alt="Peonies Boutique"></div>
+
+  <!-- Customer catalog -->
+  <div id="customer">
+    <div id="view"></div>
+    <div id="detail" class="overlay" hidden></div>
+    <div id="search" class="overlay" hidden></div>
+  </div>
+
+  <!-- Screensaver / attract mode -->
+  <div id="attract" class="overlay" hidden></div>
+  <!-- Admin PIN pad -->
+  <div id="pin" class="overlay" hidden></div>
+  <!-- Admin Mode -->
+  <div id="admin" class="admin" hidden></div>
+
+  <noscript><p style="padding:2rem;font-family:sans-serif">The catalog needs JavaScript. Please open it in Microsoft Edge or Google Chrome.</p></noscript>
+
+  <!-- Classic scripts (no modules) so the catalog also runs straight from a folder (file://) without a server -->
+  <script src="js/ui.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/seed-images.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    PB.app.start().then(function () { if (PB.admin && PB.admin.resetPinViaUrl) PB.admin.resetPinViaUrl(); });
+
+    // Offline support + "install as app" when served from a web address (GitHub Pages etc.)
+    if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+      navigator.serviceWorker.register('sw.js').catch(function (e) { console.warn('Offline support unavailable', e); });
+    }
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); PB.installPrompt = e; });
+    window.addEventListener('appinstalled', function () { PB.installPrompt = null; });
+
+    // Keep the kiosk screen awake while the catalog is showing (supported on Android Chrome)
+    (function keepAwake() {
+      var lock = null;
+      function req() { if (!('wakeLock' in navigator) || document.visibilityState !== 'visible') return; navigator.wakeLock.request('screen').then(function (l) { lock = l; }).catch(function () {}); }
+      document.addEventListener('visibilitychange', req);
+      document.addEventListener('pointerdown', function () { if (!lock || lock.released) req(); }, { passive: true });
+      req();
+    })();
+  </script>
+</body>
+</html>
